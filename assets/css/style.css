@@ -227,16 +227,6 @@ a {
     height: 200px;
   }
 }
-[data-toggle='on'] {
-    display:block;
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  [data-toggle='off'] {
-    display:none;
-  }
-
 .photographer__btn {
   bottom: 0;
   margin-bottom: 50px;

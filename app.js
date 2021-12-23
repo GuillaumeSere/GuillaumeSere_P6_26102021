@@ -33,4 +33,4 @@ class FishEyeApp {
 
 }
 // Initialise l'application
-const app = new FishEyeApp();
+ new FishEyeApp();

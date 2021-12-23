@@ -18,6 +18,7 @@ const contactForm = {
                 // Evénement sur chaque modal
                 link.addEventListener("click", () => this.open(mid));
                 Object.values(this.modal[mid].getElementsByClassName("close")).forEach(e => e.addEventListener("click", () => this.close(mid)));
+                
             })
      
         },

@@ -52,6 +52,20 @@ export default class Photographer {
             photographerLike[i].parentElement.querySelector(".media__infos__like-nb").innerHTML --;
            }
           })
+
+          photographerLike[i].addEventListener("keyup", () => {
+            if (photographerLike[i].classList.toggle("check")){
+                const check = {...photographerLike[i], likes: photographerLike[i] +1}
+                checks.push(check)
+                this.photographer.likes ++;
+                likes.innerHTML = this.photographer.likes;
+                photographerLike[i].parentElement.querySelector(".media__infos__like-nb").innerHTML ++;
+            }else {
+             this.photographer.likes --;
+             likes.innerHTML = this.photographer.likes;
+             photographerLike[i].parentElement.querySelector(".media__infos__like-nb").innerHTML --;
+            }
+           })
       }  
 
     // gestion des filtres de trie par catégorie
