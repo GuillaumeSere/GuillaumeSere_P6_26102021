@@ -18,7 +18,6 @@ const contactForm = {
                 // Evénement sur chaque modal
                 link.addEventListener("click", () => this.open(mid));
                 Object.values(this.modal[mid].getElementsByClassName("close")).forEach(e => e.addEventListener("click", () => this.close(mid)));
-                
             })
      
         },
@@ -49,7 +48,6 @@ const contactForm = {
                 require: true,
                 regex: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{1,}$/
             }
-         
         },
     
         onSubmit(event) {
@@ -57,13 +55,13 @@ const contactForm = {
             contactForm.form_inscription.validateInputs();
             // Submit faill
             if (contactForm.form_inscription.error) {
-               
+           
             }
             // Submit success
             else {
                 contactForm.modal.close("modal_inscription");
                 contactForm.modal.open("modal_success_inscription");
-                document.getElementById("contact-form").reset();
+                document.getElementById("contact-form").reset();     
             }
         },
         validateInputs() {
@@ -83,7 +81,7 @@ const contactForm = {
                     formGroup.classList.add("error");
                 } else {
                     formGroup.classList.remove("error"); 
-                }
+                }console.log(form_inscription.elements[name].value)
             }
         }  
     }
