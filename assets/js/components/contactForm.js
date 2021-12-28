@@ -23,6 +23,7 @@ const contactForm = {
         },
         open(mid) {
             this.modal[mid].style.display = "block";
+            document.getElementById("contact-form").focus();
         },
         close(mid) {
             this.modal[mid].style.display = "none";

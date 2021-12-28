@@ -53,7 +53,7 @@ export default class Photographer {
            }
           })
 
-          photographerLike[i].addEventListener("keyup", () => {
+          photographerLike[i].addEventListener("keypress", () => {
             if (photographerLike[i].classList.toggle("check")){
                 const check = {...photographerLike[i], likes: photographerLike[i] +1}
                 checks.push(check)
@@ -140,6 +140,7 @@ export default class Photographer {
         
         // ouverture de la lightbox
         lightbox.classList.add("open");
+        document.getElementById("modal-lightbox").focus();
 
         // fermeture de la lightbox
         lightbox.querySelector(".close").addEventListener("click", () => {
