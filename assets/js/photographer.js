@@ -169,6 +169,7 @@ export default class Photographer {
 
     // Initialisation de la modal de contact
     contactForm.modal.init();
+    document.getElementById("name").innerHTML = this.photographer.name;
     document.getElementById("contact-form").addEventListener("submit", contactForm.form_inscription.onSubmit);
   }
 
