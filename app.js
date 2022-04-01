@@ -23,7 +23,7 @@ class FishEyeApp {
   }
 
   fetchJSON(){
-    fetch("https://guillaumesere.github.io/GuillaumeSere_P6_26102021/assets/js/data/FishEyeData.json").then(response => response.json())
+    fetch("assets/js/data/FishEyeData.json").then(response => response.json())
     .then(datas => {
         this.datas = datas;
         this.initApp();

@@ -22,11 +22,6 @@ body.no-scroll {
   overflow: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
 /* header page d'acceuil */
 .header {
   display: flex;
@@ -79,6 +74,7 @@ a {
   padding: 2px 7px;
   text-transform: capitalize;
   font-weight: 500;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 976px) {
@@ -114,16 +110,21 @@ a {
   font-size: 0.75rem;
   color: #901C1C;
 }
+.tag-item.active a{
+    color: white;
+}
 .tag-item a {
   display: block;
   padding: 2px 7px;
   text-transform: capitalize;
   font-weight: 500;
+  text-decoration: none;
+  color: #901C1C;
 }
 .tag-item a::before {
   content: "#";
 }
-.tag-item a:hover, .tag-item:focus, .tag-item.active{
+.tag-item a:hover, .tag-item:focus{
   color: #FFF;
   background-color: #901C1C;
   border-radius: 11px;
@@ -707,6 +708,7 @@ a {
 }
 .main .photographer-thumbnail .photographer__profil {
   display: inline-block;
+  text-decoration: none;
 }
 .main .photographer-thumbnail .photographer__profil__img {
   width: 200px;
@@ -751,7 +753,7 @@ a {
   font-size: 12px;
   color: #901C1C;
 }
-.main .photographer-thumbnail .tag-list .tag-item:hover {
+.main .photographer-thumbnail .tag-list .tag-item a:hover {
   color: #FFF;
   background: #901C1C;
 }
@@ -760,6 +762,7 @@ a {
   padding: 2px 7px;
   text-transform: capitalize;
   font-weight: 500;
+  color: #901C1C;
 }
 
 .direct-link-main {
@@ -774,6 +777,8 @@ a {
   transform: translate3d(-50%, 0, 0);
   transition: top 0.3s ease;
   z-index: 100;
+  text-decoration: none;
+  color:#000;
 }
 .direct-link-main:focus {
   top: -30px;
