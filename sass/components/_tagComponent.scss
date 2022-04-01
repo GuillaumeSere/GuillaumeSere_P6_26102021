@@ -9,29 +9,5 @@
     gap: 6px 5px;
 }
 
-.tag-item{
-    display: inline-block;
-    border: 1px solid #C4C4C4;
-    border-radius: 11px;
-    font-size: 0.75rem;
-    color: $red;
 
-
-    a{
-        display: block;
-        padding: 2px 7px;
-        text-transform: capitalize;
-        font-weight: 500;
-
-        &::before
-        { 
-            content: "#" 
-        }
-    }
-
-    &:hover, &:focus, &[data-active="true"]
-    {
-        color: $white;
-        background-color: $red;
-    }
-}
+  

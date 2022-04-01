@@ -123,9 +123,10 @@ a {
 .tag-item a::before {
   content: "#";
 }
-.tag-item:hover, .tag-item:focus, .tag-item.active{
+.tag-item a:hover, .tag-item:focus, .tag-item.active{
   color: #FFF;
   background-color: #901C1C;
+  border-radius: 11px;
 }
 
 .photographer-thumbnail {

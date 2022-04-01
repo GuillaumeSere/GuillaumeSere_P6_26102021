@@ -57,39 +57,7 @@
             }
         }
 
-        .tag-list {
-            display: inline-flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 6px 5px;
-            list-style: none;
-
-            .tag-item {
-                display: inline-block;
-                border: 1px solid #c4c4c4;
-                border-radius: 10px;
-                font-size: 12px;
-                color: $red;
-
-                &:hover {
-                    color: $white;
-                    background: $red;
-                }
-
-                a {
-                    display: block;
-                    padding: 2px 7px;
-                    text-transform: capitalize;
-                    font-weight: 500;
-                }
-               
-            }
-            /*
-            .tag-item.active{
-                color: $white;
-                background: $red;
-            }*/
-        }
+     
     }
 }
 
