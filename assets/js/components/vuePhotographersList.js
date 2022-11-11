@@ -6,7 +6,7 @@ function createListTemplate(photographers) {
     photographers.forEach(photographer => {
         template +=
             `<article class="photographer-thumbnail">
-            <a href="profil.html?id=${photographer.id}" class="photographer__profil">
+            <a href="https://guillaumesere.github.io/GuillaumeSere_P6_26102021/profil.html?id=${photographer.id}" class="photographer__profil">
                 <img class="photographer__profil__img" src="assets/images/photos/Photographers ID Photos/${photographer.portrait}" alt="${photographer.alt}">
                 <h2 class="photographer__profil__name">${photographer.name}</h2>
             </a>

@@ -124,7 +124,7 @@ body.no-scroll {
 .tag-item a::before {
   content: "#";
 }
-.tag-item a:hover, .tag-item:focus{
+.tag-item:hover, .tag-item:focus{
   color: #FFF;
   background-color: #901C1C;
   border-radius: 11px;
