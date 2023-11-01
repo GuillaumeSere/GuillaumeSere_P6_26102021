@@ -28,8 +28,9 @@
     }
 
     &:hover{
-        background-color:red;
-        border: 1px solid $black;
+        background-color: $lightRed;
+        border: 1sx solid black;
+    
         color: $black;
     }
 
