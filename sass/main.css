@@ -22,6 +22,11 @@ body.no-scroll {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* header page d'acceuil */
 .header {
   display: flex;
@@ -61,10 +66,6 @@ body.no-scroll {
   font-size: 12px;
   color: #901C1C;
 }
-.header nav .tag-list .tag-item.active{
-  color: #FFF;
-  background: #901C1C;
-}
 .header nav .tag-list .tag-item:hover {
   color: #FFF;
   background: #901C1C;
@@ -74,7 +75,6 @@ body.no-scroll {
   padding: 2px 7px;
   text-transform: capitalize;
   font-weight: 500;
-  text-decoration: none;
 }
 
 @media screen and (min-width: 976px) {
@@ -103,33 +103,6 @@ body.no-scroll {
   gap: 6px 5px;
 }
 
-.tag-item {
-  display: inline-block;
-  border: 1px solid #C4C4C4;
-  border-radius: 11px;
-  font-size: 0.75rem;
-  color: #901C1C;
-}
-.tag-item.active a{
-    color: white;
-}
-.tag-item a {
-  display: block;
-  padding: 2px 7px;
-  text-transform: capitalize;
-  font-weight: 500;
-  text-decoration: none;
-  color: #901C1C;
-}
-.tag-item a::before {
-  content: "#";
-}
-.tag-item a:hover, .tag-item:focus{
-  color: #FFF;
-  background-color: #901C1C;
-  border-radius: 11px;
-}
-
 .photographer-thumbnail {
   text-align: center;
 }
@@ -139,7 +112,8 @@ body.no-scroll {
 .photographer-thumbnail .photographer__profil__img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   background-color: #dedede;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
@@ -197,7 +171,8 @@ body.no-scroll {
 .photographer-profil .photographer__img {
   width: 100px;
   height: 100px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   background-color: #dedede;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
@@ -229,21 +204,18 @@ body.no-scroll {
     height: 200px;
   }
 }
+
 .photographer__btn {
-  bottom: 0;
-  margin-bottom: 50px;
-  z-index: 1;
   position: fixed;
-  left: 50%;
-  margin-top: -160px;
+  left: 48%;
+  margin-top: 10px;
   transform: translate3d(-50%, 0, 0);
 }
 
 @media screen and (min-width: 950px) {
   .photographer__btn {
-    bottom: initial;
     position: absolute;
-    margin-top: -190px;
+    margin-top: -240px;
     z-index: 0;
   }
 }
@@ -272,8 +244,8 @@ body.no-scroll {
 }
 .btn:hover {
   background-color: #DB8876;
+  border: 1px solid #000;
   color: #000;
-  border: 1px solid blac !important;
 }
 @media screen and (min-width: 950px) {
   .btn {
@@ -330,12 +302,6 @@ body.no-scroll {
     border-radius: 5px;
     z-index: 100;
   }
-  .filter__wrapper .filter-list.open{
-      display:inline-block;
-  }
-  .filter__wrapper .filter-list.close{
-    display:none;
-}
   .filter__wrapper .filter-list__item {
     line-height: 49px;
     padding: 10px;
@@ -352,12 +318,7 @@ body.no-scroll {
     border-bottom: 0px;
     list-style: none;
   }
-  .filter__wrapper.open .filter-btn:after {
-    content: "";
-    border-width: 0 3px 3px 0;
-    border: solid #FFF;
-    padding: 4px;
-    display: inline-block; 
+  .filter__wrapper.open .filter-btn::after {
     transform: rotate(-135deg) translate3d(-10%, -10%, 0);
   }
 }
@@ -394,7 +355,8 @@ body.no-scroll {
   display: block;
   width: 100%;
   height: 190px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 5px;
   background-color: #dedede;
   overflow: hidden;
@@ -413,18 +375,10 @@ body.no-scroll {
 .media__infos__title {
   font-size: 0.875rem;
 }
-.media__infos__likes_icon{
+.media__infos__likes-icon {
   margin-left: 5px;
   cursor: pointer;
 }
-
-.media__infos__likes_icon.check{
-   background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    background-color: #901C1C;
-  }
 
 @media screen and (max-width: 950px) {
   .card-infos {
@@ -477,44 +431,45 @@ body.no-scroll {
   grid-row-gap: 5px;
   max-width: 95%;
 }
-.lightbox i {
+.lightbox__container i {
   font-size: 1.5rem;
   color: #901C1C;
 }
-.lightbox .arrow-left {
+.lightbox__container .arrow-left {
   cursor: pointer;
   position: absolute;
   left: 30px;
   border: none;
   background: transparent;
 }
-.lightbox .arrow-right {
-    cursor: pointer;
-    position: absolute;
-    right: 30px;
-    border: none;
-    background: transparent;
+.lightbox__container .arrow-right {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  border: none;
+  background: transparent;
 }
-.lightbox .media-container {
+.lightbox__container .media-container {
   grid-area: 1/2/2/3;
   width: 100%;
 }
-.lightbox .media-container .media {
-  object-fit: cover;
+.lightbox__container .media-container .media {
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   max-width: 100%;
   max-height: calc(100vh - 100px);
   border-radius: 5px;
 }
-.lightbox .title {
+.lightbox__container .title {
   grid-area: 2/2/3/3;
   font-size: 0.8rem;
   color: #901C1C;
 }
-.lightbox .close {
+.lightbox__container .close {
   cursor: pointer;
   background: transparent;
-  border:none;
+  border: none;
   position: absolute;
   top: 30px;
   right: 30px;
@@ -709,12 +664,12 @@ body.no-scroll {
 }
 .main .photographer-thumbnail .photographer__profil {
   display: inline-block;
-  text-decoration: none;
 }
 .main .photographer-thumbnail .photographer__profil__img {
   width: 200px;
   height: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 50%;
   background-color: #dedede;
   filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
@@ -740,31 +695,6 @@ body.no-scroll {
   color: #525252;
   font-size: 12px;
 }
-.main .photographer-thumbnail .tag-list {
-  display: inline-flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 6px 5px;
-  list-style: none;
-}
-.main .photographer-thumbnail .tag-list .tag-item {
-  display: inline-block;
-  border: 1px solid #c4c4c4;
-  border-radius: 10px;
-  font-size: 12px;
-  color: #901C1C;
-}
-.main .photographer-thumbnail .tag-list .tag-item a:hover {
-  color: #FFF;
-  background: #901C1C;
-}
-.main .photographer-thumbnail .tag-list .tag-item a {
-  display: block;
-  padding: 2px 7px;
-  text-transform: capitalize;
-  font-weight: 500;
-  color: #901C1C;
-}
 
 .direct-link-main {
   position: fixed;
@@ -778,11 +708,9 @@ body.no-scroll {
   transform: translate3d(-50%, 0, 0);
   transition: top 0.3s ease;
   z-index: 100;
-  text-decoration: none;
-  color:#000;
 }
 .direct-link-main:focus {
-  top: -30px;
+  top: 6px;
 }
 
 @media screen and (min-width: 768px) {
@@ -812,6 +740,4 @@ body.no-scroll {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
