@@ -243,8 +243,8 @@ a {
   width: 170px;
 }
 .btn:hover {
-  background-color: #76db94;
-  border: 1px solid #000;
+  background-color: #DB8876;
+  border: 1px solid black;
   color: #000;
 }
 @media screen and (min-width: 950px) {
