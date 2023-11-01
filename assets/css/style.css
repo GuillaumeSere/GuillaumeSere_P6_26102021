@@ -273,7 +273,7 @@ body.no-scroll {
 .btn:hover {
   background-color: #DB8876;
   color: #000;
-  border: 1px solid blac !important;
+  border: 1px solid black !important;
 }
 @media screen and (min-width: 950px) {
   .btn {
