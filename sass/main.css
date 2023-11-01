@@ -244,8 +244,7 @@ a {
 }
 .btn:hover {
   background-color: #DB8876;
-  border: 1px solid black;
-  color: #000;
+  border: 1px solid #000;
 }
 @media screen and (min-width: 950px) {
   .btn {
